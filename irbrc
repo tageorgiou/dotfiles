@@ -1,6 +1,11 @@
 require 'irb/completion'
 require 'pp'
 IRB.conf[:AUTO_INDENT]=true
+if require 'wirble'
+	Wirble.init
+	Wirble.colorize
+end
+
 class Object
   # Return a list of methods defined locally for a particular object.  Useful
   # for seeing what it does whilst losing all the stuff that's implemented
