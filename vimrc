@@ -37,8 +37,8 @@ filetype plugin on
 
 " Backups and files
 set backup
-set backupdir=~/.vim/backups
-set directory=~/.vim/tmp
+set backupdir=~/.vimtmp/backups
+set directory=~/.vimtmp/tmp
 
 set ruler "Show line/col num + position in file
 "set nu "Show line numbers
