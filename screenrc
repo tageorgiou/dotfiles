@@ -1,0 +1,5 @@
+
+defscrollback 5000
+
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
