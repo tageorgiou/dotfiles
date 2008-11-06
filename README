@@ -1,1 +1,3 @@
 My customized dotfiles
+
+I just symlink each file here to its corresponding ~/.file counterpart, i should probably make a hook to do that automatically though
