@@ -84,10 +84,19 @@ set incsearch
 
 map <C-t> :FuzzyFinderTextMate<CR>
 
+"behave like a wordprocessor
+autocmd BufRead *\.txt setlocal formatoptions=l
+autocmd BufRead *\.txt setlocal lbr
+"go up 1 wrapped line instead of a full line
+autocmd BufRead *\.txt map <buffer> j gk
+autocmd BufRead *\.txt map <buffer> k gk
+autocmd BufRead *\.txt setlocal smartindent
+autocmd BufRead *\.txt setlocal spell spelllang=en_us
+
 "auto end brace and parentheses
 "http://vim.wikia.com/wiki/Automatically_append_closing_characters
 inoremap { 		{}<Left>
-inoremap {<CR>  {<CR>}<Esc>0
+inoremap {<CR>  {<CR><Cr>}<Up><Esc>0
 inoremap {{     {
 inoremap {}     {}
 
