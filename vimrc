@@ -20,7 +20,7 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 set autowrite
 
 "folding
-set foldmethod=syntax
+"set foldmethod=syntax
 
 " Set colorscheme
 if has("gui_running")
@@ -95,26 +95,3 @@ autocmd BufRead *\.txt setlocal spell spelllang=en_us
 
 "auto end brace and parentheses
 "http://vim.wikia.com/wiki/Automatically_append_closing_characters
-inoremap { 		{}<Left>
-inoremap {<CR>  {<CR><Cr>}<Up><Esc>0
-inoremap {{     {
-inoremap {}     {}
-
-inoremap (  ()<Left>
-inoremap <silent> )   )<Esc>
-                      \:let tmp0=&clipboard <BAR>
-                      \let &clipboard=''<BAR>
-                      \let tmp1=@"<BAR>
-                      \let tmp2=@0<CR>
-                      \y2l
-                      \:if '))'=="<C-R>=escape(@0,'"\')<CR>"<BAR>
-                      \  exec 'normal "_x'<BAR>
-                      \endif<BAR>
-                      \let @"=tmp1<BAR>
-                      \let @0=tmp2<BAR>
-                      \let &clipboard=tmp0<BAR>
-                      \unlet tmp0<BAR>
-                      \unlet tmp1<BAR>
-                      \unlet tmp2<CR>
-                      \a
-
