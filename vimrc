@@ -2,6 +2,7 @@ set nocompatible
 
 " Make tabs 4 characters instead of default 8
 set tabstop=4
+set shiftwidth=4
 
 " Minimal number of screen lines to keep above and below the cursor
 set scrolloff=3
@@ -93,5 +94,6 @@ autocmd BufRead *\.txt map <buffer> k gk
 autocmd BufRead *\.txt setlocal smartindent
 autocmd BufRead *\.txt setlocal spell spelllang=en_us
 
-"auto end brace and parentheses
-"http://vim.wikia.com/wiki/Automatically_append_closing_characters
+nmap <C-D> ,c<space>
+vmap <C-D> ,c<space>
+imap <C-D> ,c<space>
